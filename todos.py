@@ -1,7 +1,6 @@
 # cloudtrail to track actions
 #   - console x
 #   - python
-# figure out best way to summarize cloudtrail logs
 # set up IAM role as admin user, try doing everything as that IAM
 #   - console x
 #   - python
@@ -15,17 +14,16 @@
 #   - python
 # create cost and usage report
 #   - console x
-# set billing alarm
-#   - console
 # use aws config to see what all my settings are (costs money)
-# create and use EC2 instance, free tier first
-#   - try setting up with gui
-#   - needs to be stored in an s3 bucket, so make that first
+#   - console
+# create and use EC2 instance, free tier first, try setting up with gui
+#   - console
+#   - python
 # set billing alarm
 #   - console
-#   - python?
-
-
-
-# maybe glue (but airflow first)
-# try pycharm sdk (seems to have somewhat limited features)
+# lambda- make test function and run it
+#   - console x
+#   - python
+# CI/CD stuff
+# Build simple Redshift DB, query against it
+# Cloudformatiion template
