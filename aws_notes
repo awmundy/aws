@@ -1,0 +1,191 @@
+
+shield standard- free
+
+reserved instance- cheapest if requirement is no interruptions
+
+aws trusted advisor- tool for cost optimization, performance, security, fault tolerance, service limits
+
+well architected framework- operational excellence, security, reliability, performance efficiency, cost optimization
+
+well architected reliability- service quotas, trusted advisor, vpc
+
+db that allows cross region access- dynamodb 
+does not allow cross region access- aurora, rds
+
+route 53 policies- https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html
+route 53- domain registration, health checks and monitoring
+
+ec2- IaaS
+
+security groups- instance level, allow rules only, default is no rules so nothing allowed, stateful so a response from a request sent out is allowed, and responses are allowed out if the request was allowed in
+
+nacl- subnet level, has both deny and allow rules, default is it allows everything in and out, has list of rules evaluated in order
+
+account removal from Organizations- only if it can stand alone
+
+service plans- memorize more stuff like which ones give access to infrastructre event management
+
+EBS- one availability zone, one instance
+
+EFS- multiple instances multiple availability zones
+
+data transfer charges- generally none for in, none for between services in same region, some for outbound
+
+WAF protects these services- cloudfront, api gatweway, load balancer, graphql api, cognito
+waf cost- not free
+waf protection layer- 7 (application)
+waf- protects against sql injection, cross site scripting
+
+EC2 reserved costs- 3 year cheaper than 1 year for all payment option combos
+
+Reservable services- ec2, dynamodb, rds, elasticache, redshift
+
+Dedicated host- dedicated server, can bring own licences, no shared hardware
+Dedicated instance- dedicated instance, no licenses, no hardware shared across accounts, but shared within account
+
+AWS abuse team- reportabuse of service, like spam
+
+min 1 datacenter per az, 2 az per region
+
+aurora patching- automatic by aws
+
+transcribe- speech to text, translate- translate text, polly- text to speech
+
+AWS Shield Advanced ddos protection- EC2, ELB, CloudFront, Route 53, AWS Global Accelerator
+
+encryption enabled by default- cloudtrail, aws storage gateway, glacier
+
+x-ray- debugging for serverless apps
+
+aws partner network consulting partners- consulting for migrating/architecting/managing
+aws partner network technology partners- provide hardware, software, connectivity services
+
+aws systems manager- sits on top of cloudwatch, cloudtrail, trusted advisor etc, showing you all of that info, and also allows for some automation of tasks
+
+cloudhsm- managed service, hardware security module, deals with creating and managing keys
+
+local zones- use compute close to user
+edge locations- cache data close to user
+
+elastic beanstalk- for deploying web apps, can still access underlying os
+
+emr- big data, can provision resources to do things like hadoop
+batch- provision resources to run batch computing
+step functions- cant provison resources, just orchestrates
+
+mq- message broker services
+
+config- tracks configuration changes to resources, cloudtrail does not
+
+auto-scaling- enables auto scaling (out) on various services
+
+subnet- one availabilty zone
+vpc- all availability zones in a region
+
+storage gateway- hybrid cloud storage, has tape (backups), file (stored in s3), and volume (ebs) types
+
+guard duty- monitors accounts for weird activity
+
+athena- query across s3 using sql
+
+business plan- cheapest for enhanced tech support
+enterprise plan- concierge support team, critical < 15, tam
+
+prevent ddos- shield, waf, cloudfront with route 53
+
+rds customer responsibility- db encryption, no patching
+
+compute optimizer analyzes- ebs, lambda, ec2, ec2 auto scaling
+
+user blocking- waf, route 53, acl
+
+kendra- nlp processing of unstructured data for search, finding specific documents, managed
+comprehend- also nlp processing of unstructured data, for insights
+
+default high availability storage/db- dynamodb, efs
+
+cloudwatch- access logs from multiple areas, e.g. on premises and in cloud
+cloudwatch billing is stored in N virginia us east 1
+cloudwatch monitoring- api access, resource utilization
+
+efs files can be accessed by ec2 instances regardless of what zone, region, or vpc the instance is in
+
+ami must be in same region as ec2
+
+cost allocation tags in aws billing- keuy must be unique and have only one value, aws and user tags must be activated for them to appear in report
+
+block level storage- ebs, instance store
+
+iam policy must contain- action (list of actions allowed or denied), effect (i.e. allow or deny)
+
+pay to read- efs infrequent access, s3 infrequent access and glacier
+
+online analytical processing- redshift
+
+aws budget types- cost, usage, reservation, savings plans
+
+read replica use case- performance/scalability bc read queries wont interfere with other stuff
+
+customer gateway- on premises door
+vpc private gateway- door to the vpc
+vpc endpoint gateway- connect vpc directly to services (s3 and dynamodb)
+vpc interface endpoint- connect to other services
+direct connect- connect on premises servers to aws
+transit gateway- connect multiple vpcs and on prem networks 
+vpc peering- connect two vpcs
+internet gateway- connect intances within vpc to internet
+storage gateway- connect on prem servers to cloud storage
+api gateway- not part of a vpc, managed service for creating and maintaing apis
+network address translation gateway/instance- allows instances in private subnet to connect to internet, but internet cant connect, gateway is managed, instance is not
+
+credential reports- shows all users, passwords, keys
+
+s3 transfer acceleration- fast file transfer to s3, uses edge locations
+s3 stores data in a flat heirarcy, is key value based
+s3 allows life cycle management rules to move stuff around based on the rules
+
+device farm- testing across different devices/browsers
+
+service that allows billing alarms- cloudwatch
+service that allows notifications for under or overutilization- budgets
+
+read replicas can be in different regions
+
+fargate- serverless compute for containers
+
+hardware mfa- device that generates numbers for you
+u2f- usb authentication
+
+aws org cost savings thing- different accounts have to be using instances in the same az
+
+storage that can be used on prem- efs
+
+ec2 instance user data- bootstrap script that runs on ec2 startup
+
+application load balancer- balance http(s) traffic
+network load balancer- balance tcp, udp, and tls traffic
+
+cognito- user signin/signup
+
+lightsail- virtual private server, containers, dbs, all pre configured
+
+aws fault injection simulator- simulates faults to test resiliency
+
+lex- chatbots
+
+cost explorer- monitor costs, savings plans
+budgets- set custom budgets, get alerts when you exceed or are forecasted to exceed budget
+
+code guru- automate code review
+
+shared responsibility for aws and customer- config management, os config
+
+temporary creds- aws security token service
+
+total cost of ownership is what you currently pay to maintain your stuff, pre cloud migration
+
+ongoing transfer of data to the cloud- datasync
+
+review permissions of users- iam access advisor
+
+prepare data for analytics- glue
